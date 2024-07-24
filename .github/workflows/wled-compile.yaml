@@ -1,0 +1,6 @@
+[env:custom_build]
+extends = env:lolin_s2_mini
+build_flags = ${env:lolin_s2_mini.build_flags} ${esp32.AR_build_flags} -D USERMOD_AUTO_SAVE -D USERMOD_PING_PONG_CLOCK -D USERMOD_WORDCLOCK -D USERMOD_ANALOG_CLOCK -D USERMOD_ANIMATED_STAIRCASE
+lib_deps = 
+  ${env:lolin_s2_mini.lib_deps}
+  ${esp32.AR_lib_deps}
